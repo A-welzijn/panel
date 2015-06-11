@@ -1,6 +1,6 @@
 {
   "name": "awelzijn-panel",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": [
     "dist/awelzijn-panel.js"
   ],
