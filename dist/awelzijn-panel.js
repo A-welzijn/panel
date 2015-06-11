@@ -54,7 +54,7 @@
 		};
 	}]);
 })();
-;angular.module('tink.skeleton').run(['$templateCache', function($templateCache) {
+;angular.module('awelzijn.panel').run(['$templateCache', function($templateCache) {
   'use strict';
 
   $templateCache.put('templates/panel.html',
