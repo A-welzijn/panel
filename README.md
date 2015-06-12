@@ -1,38 +1,46 @@
-# Tink skeleton Angular directive
+# A-Welzijn Panel en Panel fields
 
-v1.0.2
+v1.0.3
 
-## What is this repository for?
+### Hoe het eruit ziet
 
-The Tink Angular skeleton provides a scaffold for a directive or service that can easily work with Tink.
+![Screenshot](https://s3.amazonaws.com/f.cl.ly/items/2H3R2U0K0820370W2Y1L/panel.PNG)
 
-Tink is an in-house developed easy-to-use front end framework for quick prototyping and simple deployment of all kinds of websites and apps, keeping a uniform and consistent look and feel.
+### Hoe het te gebruiken
 
-## Setup
+#### Panel
 
-### Prerequisites
+```html
+<a-welzijn-panel title="Testje">
+	<div class="panel-body-heading">
+		Jawadde dadde
+	</div>
+	<div class="row">
+		<p>Random tekst.</p>
+	</div>
+</a-welzijn-panel>
+```
+In deze directive kan je ook gemakkelijk de [loading-overlay](https://github.com/A-welzijn/loading-overlay)-directive gebruiken.
 
-* nodeJS [http://nodejs.org/download/](http://nodejs.org/download/)
-* bower: `npm install -g bower`
+#### Panel field
 
-### Install
+```html
+<a-welzijn-panel-field title="Test" label="{{ctrl.vandaag | date}}"></a-welzijn-panel-field>
+```
+Deze directive is vooral te gebruiken in combinatie met de Panel, maar kan eventueel ook in een modal (of in principe eender waar) gebruikt worden.
 
-1. Go to the root of your project and type the following command in your terminal:
-   `bower install tink-back-to-top-angular --save`
+Deze gaat per *field* een titel en een label genereren die samen de helft van de bruikbare breedte gaan innemen. Deze kan overschreven worden door het `colspan` attribuut te gebruiken:
+```html
+<a-welzijn-panel-field colspan="12" title="Lange content" label="{{ctrl.loremipsum}}"></a-welzijn-panel-field>
+```
+![Screenshot](https://s3.amazonaws.com/f.cl.ly/items/3B2s3K100l003a3c0b09/panellang.PNG)
 
-2. Include `dist/tink-back-to-top-angular.js` and its necessary dependencies in your project.
-
-3. On http://tink.digipolis.be you will find all necessary documentation.
-
-## Contribution guidelines
-
-* If you're not sure, drop us a note
-* Fork this repo
-* Do your thing
-* Create a pull request
-
-## Who do I talk to?
-
-* Jasper Van Proeyen - jasper.vanproeyen@digipolis.be - Lead front-end
-* Tom Wuyts - tom.wuyts@digipolis.be - Lead UX
-* [The hand](https://www.youtube.com/watch?v=_O-QqC9yM28)
+Deze directive heeft ook een optie om van label over te schakelen naar een input veld, zodat een edit-modus gemakkelijk kan getoggled worden.
+Het input veld schrijf je gewoon tussen het panel-field element.
+```html
+<dgp-panel-field edit-mode="ctrl.editMode" title="Datum" label="{{ctrl.datum | date:'dd/MM/yyyy'}}">
+	<data-tink-datepicker data-ng-model="ctrl.datum"></data-tink-datepicker>
+</dgp-panel-field>
+```
+Hiervoor voeg je gewoon het `edit-mode`-attriuut toe, deze is een boolean waarde op je controller. Deze voeg je toe op al je panel-fields en trigger je eventueel via een knop in je panel.
+![Screenshot](https://s3.amazonaws.com/f.cl.ly/items/0s3r1k2a3V302r3A3i1Q/paneledit.PNG)
