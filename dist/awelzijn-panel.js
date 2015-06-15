@@ -59,7 +59,7 @@
 
   $templateCache.put('templates/panel.html',
     "<section class=panel> <header class=panel-heading> <i class=\"fa fa-th-large\"></i> <h1 class=panel-title>{{title}}\n" +
-    "<a class=anchorPijl anchor-smooth-scroll=top></a> </h1> </header> <div class=panel-body a-welzijn-loading-overlay loading=loading> <div> <div ng-transclude></div> </div> </div> </section>"
+    "<a class=anchorPijl anchor-smooth-scroll=top></a> </h1> </header> <div class=panel-body a-welzijn-loading-overlay loading=loading> <div ng-transclude></div> </div> </section>"
   );
 
 
