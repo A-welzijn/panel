@@ -1,12 +1,12 @@
-.panel-body-heading {
+.panel-body h1 {
   border-bottom: 1px solid #c3c3c3;
-  padding-bottom: 15px;
-  margin-bottom: 20px;
+  padding-bottom: 18px;
   font-size: 20px;
   color: #999999;
-  font-weight: 300; }
+  font-weight: 300;
+  margin: 3px 0 20px 0; }
 
-.panel-body-heading a {
+.panel-body-heading h1 a {
   font-weight: bold;
   cursor: pointer;
   color: #999999;
