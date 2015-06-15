@@ -6,6 +6,9 @@
   font-weight: 300;
   margin: 3px 0 20px 0; }
 
+.panel-body h1:not(:first-child) {
+  margin-top: 20px; }
+
 .panel-body-heading h1 a {
   font-weight: bold;
   cursor: pointer;
