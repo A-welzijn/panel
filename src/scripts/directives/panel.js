@@ -5,7 +5,7 @@
   } catch (e) {
     module = angular.module('awelzijn.panel', []);
   }
-  module.directive('aWelzijnPanel', [function () {
+  module.directive('AWelzijnPanel', [function () {
     return {
       restrict: 'E',
       replace: true,

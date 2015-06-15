@@ -1,12 +1,23 @@
 # A-Welzijn Panel en Panel fields
 
-v1.0.3
+v1.0.4
 
 ### Hoe het eruit ziet
 
 ![Screenshot](https://s3.amazonaws.com/f.cl.ly/items/2H3R2U0K0820370W2Y1L/panel.PNG)
 
 ### Hoe het te gebruiken
+
+```javascript
+"dependencies": {
+	"awelzijn-panel": "latest"
+ }
+```
+```javascript
+var app = angular.module('yourApp', [
+	'awelzijn.panel'
+]);
+```
 
 #### Panel
 

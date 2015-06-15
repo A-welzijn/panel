@@ -5,7 +5,7 @@
   } catch (e) {
     module = angular.module('awelzijn.panel', []);
   }
-  module.directive('aWelzijnPanel', [function () {
+  module.directive('AWelzijnPanel', [function () {
     return {
       restrict: 'E',
       replace: true,
@@ -25,7 +25,7 @@
 	} catch (e) {
 		module = angular.module('awelzijn.panel', []);
 	}
-	module.directive('aWelzijnPanelField', [function () {
+	module.directive('AWelzijnPanelField', [function () {
 		return {
 			restrict: 'E',
 			replace: true,
@@ -59,7 +59,7 @@
 
   $templateCache.put('templates/panel.html',
     "<section class=panel> <header class=panel-heading> <i class=\"fa fa-th-large\"></i> <h1 class=panel-title>{{title}}\n" +
-    "<a class=anchorPijl anchor-smooth-scroll=top></a> </h1> </header> <div class=panel-body> <div a-welzijn-loading-overlay loading=loading> <div ng-transclude></div> </div> </div> </section>"
+    "<a class=anchorPijl anchor-smooth-scroll=top></a> </h1> </header> <div class=panel-body a-welzijn-loading-overlay loading=loading> <div> <div ng-transclude></div> </div> </div> </section>"
   );
 
 
