@@ -1,6 +1,6 @@
 # A-Welzijn Panel en Panel fields
 
-v1.0.8
+v1.0.9
 
 ### Hoe het eruit ziet
 
@@ -23,12 +23,8 @@ var app = angular.module('yourApp', [
 
 ```html
 <a-welzijn-panel title="Testje">
-	<div class="panel-body-heading">
-		Jawadde dadde
-	</div>
-	<div class="row">
-		<p>Random tekst.</p>
-	</div>
+	<h1>Jawadde dadde</h1>
+	<p>Random tekst.</p>
 </a-welzijn-panel>
 ```
 In deze directive kan je ook gemakkelijk de [loading-overlay](https://github.com/A-welzijn/loading-overlay)-directive gebruiken.
