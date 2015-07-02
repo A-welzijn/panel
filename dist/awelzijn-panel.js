@@ -33,7 +33,6 @@
 			scope: {
 				title: '@', 
 				label: '@',
-				html: '=',
 				email: '@',
 				colspan: '=',
 				editMode: '=',
@@ -46,10 +45,6 @@
 					scope.colspanClass = ("col-lg-@ col-md-@").replace(/@/g, scope.colspan);
 				} else {
 					scope.colspanClass = ("col-lg-@ col-md-@").replace(/@/g, '6');
-				}
-				
-				if (angular.isDefined(scope.html) && scope.html === '') {
-					scope.html = '-';
 				}
 
 				scope.hasClickCallback = function () {
@@ -69,7 +64,7 @@
 
 
   $templateCache.put('templates/panelfield.html',
-    "<div ng-class=colspanClass> <div ng-if=title ng-class=colspanClass class=labelTitle>{{title}}</div> <div ng-class=colspanClass> <div ng-show=editMode class=panel-field-input ng-transclude></div> <div ng-if=\"label != undefined && !hasClickCallback()\" ng-show=!editMode>{{label.trim() || \"-\"}}</div> <div ng-if=html ng-bind-html=\"html | to_trusted\" ng-show=!editMode></div> <a href=\"\" ng-click=ngClick() ng-if=hasClickCallback() ng-show=!editMode>{{label.trim() || \"-\"}}</a> <a-welzijn-mail-to ng-if=email email-adres=email.trim() ng-show=!editMode></a-welzijn-mail-to> </div> </div>"
+    "<div ng-class=colspanClass> <div ng-if=title ng-class=colspanClass class=labelTitle>{{title}}</div> <div ng-class=colspanClass> <div ng-show=editMode class=panel-field-input ng-transclude></div> <div ng-if=\"label != undefined && !hasClickCallback()\" ng-show=!editMode>{{label.trim() || \"-\"}}</div> <a href=\"\" ng-click=ngClick() ng-if=hasClickCallback() ng-show=!editMode>{{label.trim() || \"-\"}}</a> <a-welzijn-mail-to ng-if=email email-adres=email.trim() ng-show=!editMode></a-welzijn-mail-to> </div> </div>"
   );
 
 }]);

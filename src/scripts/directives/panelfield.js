@@ -13,7 +13,6 @@
 			scope: {
 				title: '@', 
 				label: '@',
-				html: '=',
 				email: '@',
 				colspan: '=',
 				editMode: '=',
@@ -26,10 +25,6 @@
 					scope.colspanClass = ("col-lg-@ col-md-@").replace(/@/g, scope.colspan);
 				} else {
 					scope.colspanClass = ("col-lg-@ col-md-@").replace(/@/g, '6');
-				}
-				
-				if (angular.isDefined(scope.html) && scope.html === '') {
-					scope.html = '-';
 				}
 
 				scope.hasClickCallback = function () {
