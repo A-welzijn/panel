@@ -47,6 +47,10 @@
 				} else {
 					scope.colspanClass = ("col-lg-@ col-md-@").replace(/@/g, '6');
 				}
+				
+				if (angular.isDefined(scope.html) && scope.html === '') {
+					scope.html = '-';
+				}
 
 				scope.hasClickCallback = function () {
 					return angular.isDefined(attrs.ngClick);
