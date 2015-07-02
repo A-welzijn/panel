@@ -1,7 +1,7 @@
 {
   "name": "awelzijn-panel",
   "description": "Panel directive",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "repository": {
     "type": "git",
     "url": "git@github.com:A-welzijn/panel.git"

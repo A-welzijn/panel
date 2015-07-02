@@ -31,7 +31,7 @@
 			replace: true,
 			transclude: true,
 			scope: {
-				title: '@',
+				title: '@', 
 				label: '@',
 				html: '=',
 				email: '@',
