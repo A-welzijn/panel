@@ -1,4 +1,4 @@
-.panel-body h1 {
+.card-body h1 {
   border-bottom: 1px solid #c3c3c3;
   padding-bottom: 18px;
   font-size: 20px;
@@ -6,10 +6,10 @@
   font-weight: 300;
   margin: 3px 0 20px 0; }
 
-.panel-body h1:not(:first-child) {
+.card-body h1:not(:first-child) {
   margin-top: 20px; }
 
-.panel-body-heading h1 a {
+.card-body-heading h1 a {
   font-weight: bold;
   cursor: pointer;
   color: #999999;
@@ -17,10 +17,10 @@
   text-decoration: underline;
   margin-left: 10px; }
 
-.panel-body a.btn {
+.card-body a.btn {
   margin-left: 0; }
 
-.panel-body a.blauweLink {
+.card-body a.blauweLink {
   cursor: pointer;
   color: #3399CC;
   font-size: 15px;
@@ -35,5 +35,5 @@
 .panel-field-input {
   margin-bottom: 10px; }
 
-.panel-body {
+.card-body {
   padding: 1.14286rem !important; }
