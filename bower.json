@@ -15,8 +15,17 @@
   ],
   "dependencies": {
     "angular": "~1.3.12",
-    "awelzijn-mail-to":"latest",
-    "awelzijn-loading-overlay":"latest",
-    "tink-core": "latest"
+    "tink-editable-fieldset-angular": "0.1.0-beta.3",
+    "awelzijn-mail-to": "latest",
+    "awelzijn-loading-overlay": "latest",
+    "tink-core": "latest",
+    "tink-datepicker-angular": "~1.3.0",
+    "tink-theme-ocmw": "~1.9.1"
+  },
+  "exportsOverride": {
+    "tink-editable-fieldset-angular": {
+      "js": "dist/*.js",
+      "css": "dist/*.css"
+    }
   }
 }
