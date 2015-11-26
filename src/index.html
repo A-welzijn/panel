@@ -46,7 +46,6 @@
 	<div class="container">
 <a-welzijn-panel title="Werkgroep" loading="false">
 	<div >{{ctrl}}
-        <form name="theForm" class="fieldset-editable form-horizontal" tink-form-editable="true" values-changed="ctrl.valuesHasChanged" tink-fieldset>
             <h1>Werkgroepgegevens</h1>
             <div class="row">
                 <a-welzijn-panel-field edit-mode="true" title="Werkgroep naam" label="{{ctrl.werkgroep.naam}}">
@@ -85,13 +84,12 @@
                 </a-welzijn-panel-field>
             </div>
             
-            <h1>Omschrijving</h1><!--
+            <!--
             <div class="row">
                 <a-welzijn-panel-field colspan="12" edit-mode="true" label="{{ctrl.werkgroep.omschrijving}}">
                     <textarea class="form-control" rows="3" type="text" ng-model="ctrl.werkgroep.omschrijving"></textarea>
                 </a-welzijn-panel-field>
             </div>-->
-        </form>
 	</div>
     <div ng-if="theForm.$dirty" class="margin-top">
         <button ng-click="ctrl.bewaren();" type="button" class="btn-primary">Bewaren</button>

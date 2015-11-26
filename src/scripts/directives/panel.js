@@ -12,7 +12,9 @@
       transclude: true,
       scope: {
         title: '@',
-        loading: '='
+        loading: '=',
+        name:'=?',
+        status:'=?'
       },
       templateUrl: 'templates/panel.html'
     };
