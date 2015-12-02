@@ -13,8 +13,8 @@
       scope: {
         title: '@',
         loading: '=',
-        name:'=',
-        status:'='
+        name:'=?',
+        status:'=?'
       },
       templateUrl: 'templates/panel.html'
     };
@@ -38,7 +38,6 @@
 				email: '@',
 				colspan: '=',
 				editMode: '=',
-				filter: '@',
 				ngClick: '&'
 			},
 			templateUrl: 'templates/panelfield.html',
@@ -49,10 +48,6 @@
 					$scope.colspanClass = ("col-lg-@ col-md-@").replace(/@/g, $scope.colspan);
 				} else {
 					$scope.colspanClass = ("col-lg-@ col-md-@").replace(/@/g, '6');
-				}
-
-				if(!$scope.filter){
-					$scope.filter = '.trim()'
 				}
 
 
@@ -165,7 +160,7 @@
 
 								$compile(fake)($scope);
 
-								fake.bind('mousedown click',function(){
+								fake.bind('mousedown click touchstart',function(){
 									$timeout(function(){
 										$(real).focusin();
 										$(real).focus();
@@ -192,7 +187,7 @@
 
   $templateCache.put('templates/panel.html',
     "<section class=card> <header class=card-heading> <i class=\"fa fa-th-large\"></i> <h1 class=card-title>{{title}}\n" +
-    "<a class=anchorPijl anchor-smooth-scroll=top></a> </h1> </header> <div class=card-body a-welzijn-loading-overlay loading=loading> <form name=name class=\"fieldset-editable form-horizontal\" tink-form-status=status tink-form-editable=true tink-fieldset> <div ng-show=!loading ng-transclude></div> </form> </div> </section>"
+    "<a class=anchorPijl anchor-smooth-scroll=top></a> </h1> </header> <div class=card-body a-welzijn-loading-overlay loading=loading> <form novalidate name=name class=\"fieldset-editable form-horizontal\" tink-form-status=status tink-form-editable=true tink-fieldset> <div ng-show=!loading ng-transclude></div> </form> </div> </section>"
   );
 
 

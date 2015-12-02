@@ -16,7 +16,6 @@
 				email: '@',
 				colspan: '=',
 				editMode: '=',
-				filter: '@',
 				ngClick: '&'
 			},
 			templateUrl: 'templates/panelfield.html',
@@ -27,10 +26,6 @@
 					$scope.colspanClass = ("col-lg-@ col-md-@").replace(/@/g, $scope.colspan);
 				} else {
 					$scope.colspanClass = ("col-lg-@ col-md-@").replace(/@/g, '6');
-				}
-
-				if(!$scope.filter){
-					$scope.filter = '.trim()'
 				}
 
 
@@ -143,7 +138,7 @@
 
 								$compile(fake)($scope);
 
-								fake.bind('mousedown click touch',function(){
+								fake.bind('mousedown click touchstart',function(){
 									$timeout(function(){
 										$(real).focusin();
 										$(real).focus();
