@@ -8,7 +8,7 @@
 	module.directive('aWelzijnPanelField', ['$compile','$timeout','safeApply',function ($compile,$timeout,safeApply) {
 		return {
 			restrict: 'E',
-			replace: true,
+			replace: false,
 			transclude: true,
 			scope: {
 				title: '@', 
