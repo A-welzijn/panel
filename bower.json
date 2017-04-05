@@ -2,7 +2,8 @@
   "name": "awelzijn-panel",
   "version": "1.0.15",
   "main": [
-    "dist/awelzijn-panel.js"
+    "dist/awelzijn-panel.js",
+    "dist/style.css"
   ],
   "ignore": [
     ".*",
